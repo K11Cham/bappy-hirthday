@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HAPPY BIRTHDAY KAMERON</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Bowlby+One+SC&family=Permanent+Marker&family=Rubik+Mono+One&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="hazard top"></div>
+  <div class="hazard bottom"></div>
+
+  <div class="bg-glow"></div>
+
+  <div class="board">
+
+    <div class="presented-by">
+      <span class="pb-label">PRESENTED BY</span>
+      <span class="pb-name">KYLAR_EDITS PRODUCTIONS</span>
+    </div>
+
+    <div class="date-tag">9 . 13</div>
+
+    <button
+      class="sound-toggle"
+      id="soundToggle"
+      aria-label="Toggle sound"
+      type="button">
+      🔊
+    </button>
+
+    <button
+      class="dev-settings-btn"
+      id="devSettingsBtn"
+      aria-label="Toggle developer settings"
+      type="button">
+      DEV
+    </button>
+
+    <button
+      class="achievements-badge"
+      id="achievementsBadge"
+      aria-label="Open achievements"
+      type="button">
+      0/5
+    </button>
+
+    <span class="deco d1">✦</span>
+    <span class="deco d2">★</span>
+    <span class="deco d3">✧</span>
+    <span class="deco d4">★</span>
+    <span class="deco d5">✹</span>
+    <span class="deco d6">✦</span>
+    <span class="deco d7">!!</span>
+    <span class="deco d8">✧</span>
+
+    <div class="marquee">
+      <span class="marquee-track">
+        ★ HAPPY BIRTHDAY KAMERON
+        &nbsp; ★ &nbsp;
+        8 YEARS IN THE MAKING
+        &nbsp; ★ &nbsp;
+        PRESS THE BUTTON
+        &nbsp; ★ &nbsp;
+        HAPPY BIRTHDAY KAMERON
+        &nbsp; ★ &nbsp;
+        8 YEARS IN THE MAKING
+        &nbsp; ★ &nbsp;
+        PRESS THE BUTTON
+        &nbsp; ★
+      </span>
+    </div>
+
+    <div>
+
+      <div class="title-stack">
+
+        <span
+          class="title-line"
+          data-text="HAPPY BIRTHDAY">
+          HAPPY BIRTHDAY
+        </span>
+
+        <span
+          class="title-line"
+          data-text="KAMERON">
+          KAMERON
+        </span>
+
+      </div>
+
+      <div style="margin-top:16px;">
+        <span class="subhead">
+          ts took 8 years 🥀😭
+        </span>
+      </div>
+
+    </div>
+
+    <p class="mystery-line">
+      somewhere in here is a random thing you've said.
+      press the button. brace yourself.
+    </p>
+
+    <div class="button-wrap">
+
+      <div class="spin-badge">
+        PRESS<br>
+        ME
+      </div>
+
+      <button
+        class="shuffle-btn"
+        id="shuffleBtn"
+        type="button">
+        UNLEASH A RANDOM QUOTE
+      </button>
+
+    </div>
+
+    <div class="quote-counter" id="quoteCounter">
+      0 QUOTES UNLEASHED
+    </div>
+
+    <button
+      class="message-btn"
+      id="messageBtn"
+      type="button">
+      ✉ A MESSAGE FOR YOU
+    </button>
+
+    <div class="footer-credit">
+      a QUOTE-O-TRON 9000 production // happy 8th kameroni
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       CINEMATIC OVERLAY
+  ====================================================== -->
+
+  <div
+    class="intro-overlay"
+    id="introOverlay"
+    role="dialog"
+    aria-hidden="true"
+    aria-label="Quote reveal"
+    tabindex="-1">
+
+    <div class="burst-bg"></div>
+
+    <div class="burst-diamond"></div>
+
+    <div class="energy-ring r1"></div>
+    <div class="energy-ring r2"></div>
+    <div class="energy-ring r3"></div>
+
+    <div class="whiteout" id="whiteout"></div>
+    <div class="glitch-overlay" id="glitchOverlay"></div>
+    <div class="shockwave-layer" id="shockwaveLayer"></div>
+    <div class="buildup-text" id="buildupText"></div>
+    <div class="chaos-bg" id="chaosBg"></div>
+
+    <div class="flash" id="flash"></div>
+    <div class="color-flash" id="colorFlash"></div>
+
+    <div class="flare" id="flare"></div>
+    <div class="flare flare2" id="flare2"></div>
+
+    <div id="particleField"></div>
+
+    <div
+      class="countdown-num"
+      id="countdownNum">
+    </div>
+
+    <div
+      class="go-text"
+      id="goText">
+      GO!!!
+    </div>
+
+    <div
+      class="impact-text"
+      id="impactText">
+    </div>
+
+    <div class="logo-block">
+
+      <span
+        class="logo-title comic-text"
+        id="logoTitle">
+        QUOTE-O-TRON&nbsp;9000
+      </span>
+
+      <span
+        class="tagline"
+        id="tagline">
+        a KAMERON cinematic universe production
+      </span>
+
+    </div>
+
+    <div
+      class="loading-text"
+      id="loadingText">
+    </div>
+
+    <div class="ring" id="ring"></div>
+
+    <div
+      class="quote-reveal"
+      id="quoteReveal">
+
+      <p
+        class="comic-text"
+        id="quoteText"
+        data-text="">
+      </p>
+
+    </div>
+
+
+    <!-- ===================================================
+         SPONSOR POPUP
+    ==================================================== -->
+
+    <div
+      class="sponsor-overlay"
+      id="sponsorOverlay">
+
+      <div class="sponsor-popup">
+
+        <div class="sponsor-warning">
+          ⚠ IMPORTANT BROADCAST INTERRUPTION ⚠
+        </div>
+
+        <div class="sponsor-title">
+          WE'LL BE RIGHT WITH YOU
+        </div>
+
+        <div class="sponsor-subtitle">
+          AFTER A MESSAGE FROM OUR SPONSOR,
+        </div>
+
+        <div class="sponsor-brand">
+          WAR THUNDER
+        </div>
+
+        <div class="sponsor-tagline">
+          GET IN THE FIGHT™
+        </div>
+
+        <div class="sponsor-loading">
+          <span id="sponsorLoading">
+            LOADING ADVERTISEMENT...
+          </span>
+        </div>
+
+        <button
+          class="sponsor-skip"
+          id="sponsorSkip"
+          type="button">
+          SKIP AD
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="close-hint"
+      id="closeHint">
+      tap anywhere to close
+    </div>
+
+    <div class="credit">
+      intro by kylar_edits // now 400% more chaos // like &amp; subscribribe
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       ACHIEVEMENTS MENU
+  ====================================================== -->
+
+  <div
+    class="achievements-menu"
+    id="achievementsMenu"
+    role="dialog"
+    aria-hidden="true"
+    aria-label="Achievements">
+
+    <div class="achievements-card">
+
+      <button
+        class="achievements-close"
+        id="achievementsClose"
+        type="button"
+        aria-label="Close achievements">
+        ×
+      </button>
+
+      <div class="achievements-header">
+        <span class="ah-title">ACHIEVEMENTS</span>
+        <span class="ah-subtitle">collect them all</span>
+      </div>
+
+      <div class="achievements-list" id="achievementsList">
+        <!-- filled in by JS -->
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+       MESSAGE OVERLAY  (personal letter to Kameron)
+  ====================================================== -->
+
+  <div
+    class="message-overlay"
+    id="messageOverlay"
+    role="dialog"
+    aria-hidden="true"
+    aria-label="A message for Kameron">
+
+    <div class="message-card">
+
+      <button
+        class="message-close"
+        id="messageClose"
+        type="button"
+        aria-label="Close message">
+        ×
+      </button>
+
+      <div class="message-stamp">
+        <span class="stamp-label">FOR</span>
+        <span class="stamp-name">KAMERON</span>
+        <span class="stamp-date">09 . 13</span>
+      </div>
+
+      <div class="message-body">
+
+        <p>Hey, Kameron.</p>
+
+        <p>Happy birthday.</p>
+
+        <p>
+          Since i can't exactly whip out the most expensive birthday
+          present, i decided to just use the skills i have to make you
+          a birthday gift. Hope you like it!
+        </p>
+
+        <p>
+          As you know, we havent properly seen each other before last
+          week in 8 years. Just wanted to say, im really glad to have
+          gotten back with you and everyone else again, after so long.
+          Hopefully you can see i do care :P
+        </p>
+
+        <p>Anyways, enjoy!</p>
+
+        <p class="message-ps">P.S. Epilepsy warning XD</p>
+
+      </div>
+
+      <div class="message-signature">
+        — kylar
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+       TIMING DEBUGGER  (drag the slider to sync the drop)
+  ====================================================== -->
+
+  <div class="timing-debugger" id="timingDebugger">
+    <div class="td-header">
+      <span class="td-title">TIMING DEBUGGER</span>
+      <button class="td-hide" id="tdHide" type="button">×</button>
+    </div>
+    <div class="td-row">
+      <label class="td-label" for="tdOffset">DROP_OFFSET</label>
+      <input class="td-slider" id="tdOffset" type="range" min="-1500" max="2500" step="50" value="5000">
+      <span class="td-value" id="tdValue">5000ms</span>
+    </div>
+    <div class="td-stats">
+      <div>song started: <span id="tdSongStart">—</span></div>
+      <div>visual drop:  <span id="tdVisualDrop">—</span></div>
+      <div>audio drop:   <span id="tdAudioDrop">—</span></div>
+      <div class="td-offset-row">
+        offset: <span id="tdOffsetVal">—</span>
+      </div>
+    </div>
+    <div class="td-hint">
+      offset = visual - audio.  Target = 0ms.
+      Negative = visual leads audio.  Positive = visual lags audio.
+    </div>
+    <button class="td-copy" id="tdCopy" type="button">COPY FINAL VALUE</button>
+  </div>
+
+  <!-- =====================================================
+       HIDDEN YOUTUBE PLAYER
+  ====================================================== -->
+
+  <div
+    id="youtubePlayer"
+    aria-hidden="true">
+  </div>
+
+
+  <!-- =====================================================
+       YOUTUBE IFRAME API
+  ====================================================== -->
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <!-- =====================================================
+       MAIN SCRIPT
+  ====================================================== -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
